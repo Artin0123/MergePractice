@@ -1,7 +1,10 @@
 h1 {
     text-align: center;
 }
-
+p{
+    text-align: center;
+    color: green;
+}
 img {
     border: 2px solid #d8d8d8;
     width: 70%;
