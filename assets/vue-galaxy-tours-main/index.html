@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Galaxy Tours</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Galaxy Tours</title>
+    </head>
 
-<body>
-    <h1>Galaxy Tours</h1>
-    <div id="app">
-        <h2 :class="h2ClassController">{{productName}}</h2>
-        <p :style="pStyleController">{{productDescription}}</p>
-        <table v-for="(productClass, index) in productClasses" :key="index" width="100%">
-            <tr>
-                <td width="20%">{{productClass.name}}</td>
-                <td width="20%">US${{productClass.price.toLocaleString('en-US')}}</td>
-                <td>
-                    <button style="width: 35%" v-if="productClass.earlyBird">Book Earlybird!</button>
-                    <button style="width: 35%" v-else>Book</button>&nbsp;
-                    <span v-show="productClass.seatsAvailable<10" style="color:red">Almost Sold out!</span>
-                </td>
-            </tr>
-        </table>
-        <p>refresh this page to change the picture</p>
-        <img :src="imageSrc[Math.floor(Math.random()*imageSrc.length)]" :style="imageStyleController" :alt="imageAlt"
-            :title="imageAlt">
-    </div>
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="script.js"></script>
-</body>
+    <body>
+        <h1>Galaxy Tours</h1>
+        <div id="app">
+            <h2 :class="h2ClassController">{{productName}}</h2>
+            <p :style="pStyleController">{{productDescription}}</p>
+            <table v-for="(productClass, index) in productClasses" :key="index" width="100%">
+                <tr>
+                    <td width="20%">{{productClass.name}}</td>
+                    <td width="20%">US${{productClass.price.toLocaleString('en-US')}}</td>
+                    <td>
+                        <button style="width: 35%" v-if="productClass.earlyBird">Book Earlybird!</button>
+                        <button style="width: 35%" v-else>Book</button>&nbsp;
+                        <span v-show="productClass.seatsAvailable<10" style="color:red">Almost Sold out!</span>
+                    </td>
+                </tr>
+            </table>
+            <p>refresh this page to change the picture</p>
+            <img :src="imageSrc[Math.floor(Math.random()*imageSrc.length)]" :style="imageStyleController"
+                :alt="imageAlt" :title="imageAlt">
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="script.js"></script>
+    </body>
 
 </html>

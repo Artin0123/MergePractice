@@ -4,13 +4,13 @@ $(function () {
         var randomChildNumber = Math.floor(Math.random() * numberOfListItem);
         $("h1").text($("li").eq(randomChildNumber).text());
         if (randomChildNumber == 0) {
-            $("img").attr("src", "https://c.pxhere.com/photos/e9/c5/thaifood_pock_mama_tomyum_menu-575609.jpg!d");
+            $("img").attr("src", "https://hips.hearstapps.com/hmg-prod/images/1-1525230190.jpg");
         }
         if (randomChildNumber == 1) {
-            $("img").attr("src", "https://sweetamy.tw/wp-content/uploads/2021/08/IMG20210721122959-1-scaled.jpg");
+            $("img").attr("src", "https://s3-ap-northeast-1.amazonaws.com/joyinkitchen20190920/acd4bafe-5e8a-44ea-ad17-b85804e2006a.jpg");
         }
         if (randomChildNumber == 2) {
-            $("img").attr("src", "https://img.ltn.com.tw/Upload/food/page/2020/07/15/200715-10980-0-WClGQ.jpg");
+            $("img").attr("src", "https://1.bp.blogspot.com/-GNqC0IcMvP0/XRtptu9mtgI/AAAAAAAEIBU/oUo-k8M4F0AXcHU4oA3Yh1T8LjBUEOlVgCKgBGAs/s1600/IMGP9987.JPG");
         }
     });
 });
